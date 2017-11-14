@@ -22,6 +22,21 @@
             }
         }
 
+        increment(event) {
+          this.setState({
+            number: this.state.number + 1
+          })
+        }
+ 
+        decrement(event) {
+          if(this.state.number < 2) {
+            this.state.number = 2;
+          }
+          this.setState({
+            number: this.state.number - 1
+          })
+        }
+
         render() {
           return (
             <div>
